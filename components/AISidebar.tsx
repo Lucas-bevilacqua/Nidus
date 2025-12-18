@@ -54,11 +54,11 @@ const AISidebar: React.FC<AISidebarProps> = ({ isOpen, onClose }) => {
         {!result ? (
           <div className="space-y-8">
             <p className="text-gray-500 font-medium">
-              Validate your B2B SaaS idea through our AI-powered engine using the Nidus Ventures methodology.
+              Valide sua ideia B2B SaaS com nossa IA usando a metodologia Nidus Ventures. Descubra se você tem um negócio ou apenas um código.
             </p>
             <textarea
               className="w-full bg-background-light border-transparent rounded-2xl p-6 h-40 focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-              placeholder="Describe your B2B SaaS idea in detail..."
+              placeholder="Descreva sua ideia de B2B SaaS em detalhes. Qual o problema? Quem é o cliente? Como você vai vender?"
               value={idea}
               onChange={(e) => setIdea(e.target.value)}
             />
@@ -70,12 +70,12 @@ const AISidebar: React.FC<AISidebarProps> = ({ isOpen, onClose }) => {
               {loading ? (
                 <>
                   <div className="w-5 h-5 border-2 border-white/20 border-t-white rounded-full animate-spin" />
-                  Validating...
+                  Validando...
                 </>
               ) : (
                 <>
                   <span className="material-icons-round">bolt</span>
-                  Validate Methodologically
+                  Validar Ideia Agora
                 </>
               )}
             </button>
@@ -83,7 +83,7 @@ const AISidebar: React.FC<AISidebarProps> = ({ isOpen, onClose }) => {
         ) : (
           <div className="space-y-8 animate-in fade-in slide-in-from-right duration-500">
             <div className="bg-background-light p-8 rounded-3xl text-center">
-              <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Validation Score</p>
+              <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Potencial de Validação</p>
               <h3 className="text-6xl font-black text-gray-900">{result.score}%</h3>
             </div>
 
@@ -103,7 +103,7 @@ const AISidebar: React.FC<AISidebarProps> = ({ isOpen, onClose }) => {
             </div>
 
             <div className="bg-black text-white p-6 rounded-2xl">
-              <h4 className="text-xs font-bold uppercase tracking-widest text-primary mb-3">Expert Feedback</h4>
+              <h4 className="text-xs font-bold uppercase tracking-widest text-primary mb-3">Feedback do Especialista</h4>
               <p className="text-sm leading-relaxed text-gray-300">{result.feedback}</p>
             </div>
 
@@ -111,7 +111,7 @@ const AISidebar: React.FC<AISidebarProps> = ({ isOpen, onClose }) => {
               onClick={() => setResult(null)}
               className="w-full border-2 border-gray-900 text-gray-900 py-4 rounded-full font-bold hover:bg-gray-900 hover:text-white transition-all"
             >
-              Validate another idea
+              Validar outra ideia
             </button>
           </div>
         )}
