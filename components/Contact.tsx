@@ -25,7 +25,11 @@ const Contact: React.FC = () => {
         body: JSON.stringify(formData),
       });
 
-      if (!response.ok) throw new Error('Failed to submit');
+      if (!response.ok) {
+        const errorData = await response.json();
+        console.error('Submission failed:', errorData);
+        throw new Error(errorData.details || errorData.error || 'Failed to submit');
+      }
 
       setStatus('success');
       setFormData({ name: '', email: '', message: '' });
