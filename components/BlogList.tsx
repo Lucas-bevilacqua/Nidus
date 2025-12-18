@@ -6,10 +6,10 @@ import Footer from './Footer';
 import { blogPosts } from '../data/blog-data';
 import { Calendar, User, Clock, ArrowRight } from 'lucide-react';
 
-const BlogList: React.FC = () => {
+const BlogList: React.FC<{ onOpenAI: () => void }> = ({ onOpenAI }) => {
     return (
         <div className="min-h-screen bg-background-light text-gray-900 selection:bg-primary selection:text-black font-sans">
-            <Navbar onOpenAI={() => { }} /> {/* OpenAI not needed on blog list for now */}
+            <Navbar onOpenAI={onOpenAI} />
 
             <section className="pt-40 pb-20 px-4 sm:px-6 lg:px-12 bg-background-dark text-white rounded-b-[3rem] mb-20 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[150px] -mr-48 -mt-48 pointer-events-none"></div>

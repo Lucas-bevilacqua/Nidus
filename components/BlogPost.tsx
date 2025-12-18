@@ -6,7 +6,7 @@ import Footer from './Footer';
 import { blogPosts } from '../data/blog-data';
 import { Calendar, User, Clock, ArrowLeft, Share2 } from 'lucide-react';
 
-const BlogPost: React.FC = () => {
+const BlogPost: React.FC<{ onOpenAI: () => void }> = ({ onOpenAI }) => {
     const { slug } = useParams<{ slug: string }>();
     const post = blogPosts.find(p => p.slug === slug);
 
@@ -23,7 +23,7 @@ const BlogPost: React.FC = () => {
 
     return (
         <div className="min-h-screen bg-white font-sans text-gray-900 selection:bg-primary selection:text-black">
-            <Navbar onOpenAI={() => { }} />
+            <Navbar onOpenAI={onOpenAI} />
 
             <article className="pt-32 pb-20">
                 {/* Header */}

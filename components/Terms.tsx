@@ -3,10 +3,10 @@ import React from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
-const Terms: React.FC = () => {
+const Terms: React.FC<{ onOpenAI: () => void }> = ({ onOpenAI }) => {
     return (
         <div className="min-h-screen bg-background-light font-sans text-gray-900 selection:bg-primary selection:text-black">
-            <Navbar onOpenAI={() => { }} />
+            <Navbar onOpenAI={onOpenAI} />
 
             <main className="pt-32 pb-20">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-12">

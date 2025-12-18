@@ -40,11 +40,11 @@ const App: React.FC = () => {
       <div className="min-h-screen bg-background-light">
         <Routes>
           <Route path="/" element={<Home onOpenAI={() => setIsAiOpen(true)} />} />
-          <Route path="/blog" element={<BlogList />} />
-          <Route path="/blog/:slug" element={<BlogPost />} />
-          <Route path="/manifesto" element={<Manifesto />} />
-          <Route path="/termos" element={<Terms />} />
-          <Route path="/privacidade" element={<Privacy />} />
+          <Route path="/blog" element={<BlogList onOpenAI={() => setIsAiOpen(true)} />} />
+          <Route path="/blog/:slug" element={<BlogPost onOpenAI={() => setIsAiOpen(true)} />} />
+          <Route path="/manifesto" element={<Manifesto onOpenAI={() => setIsAiOpen(true)} />} />
+          <Route path="/termos" element={<Terms onOpenAI={() => setIsAiOpen(true)} />} />
+          <Route path="/privacidade" element={<Privacy onOpenAI={() => setIsAiOpen(true)} />} />
         </Routes>
         <AISidebar isOpen={isAiOpen} onClose={() => setIsAiOpen(false)} />
       </div>
