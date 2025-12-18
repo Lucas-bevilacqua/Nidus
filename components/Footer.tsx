@@ -12,9 +12,9 @@ const Footer: React.FC = () => {
           </div>
 
           <div className="flex flex-wrap justify-center gap-8 md:gap-12 mb-12">
-            <a href="#" className="text-sm font-bold text-gray-500 hover:text-black uppercase tracking-widest transition-colors">Manifesto</a>
-            <a href="#" className="text-sm font-bold text-gray-500 hover:text-black uppercase tracking-widest transition-colors">Termos de Uso</a>
-            <a href="#" className="text-sm font-bold text-gray-500 hover:text-black uppercase tracking-widest transition-colors">Privacidade</a>
+            <Link to="/manifesto" className="text-sm font-bold text-gray-500 hover:text-black uppercase tracking-widest transition-colors">Manifesto</Link>
+            <Link to="/termos" className="text-sm font-bold text-gray-500 hover:text-black uppercase tracking-widest transition-colors">Termos de Uso</Link>
+            <Link to="/privacidade" className="text-sm font-bold text-gray-500 hover:text-black uppercase tracking-widest transition-colors">Privacidade</Link>
             <Link to="/blog" className="text-sm font-bold text-gray-500 hover:text-black uppercase tracking-widest transition-colors">Blog</Link>
           </div>
 

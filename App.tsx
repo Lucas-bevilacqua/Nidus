@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -12,7 +11,10 @@ import Footer from './components/Footer';
 import AISidebar from './components/AISidebar';
 import BlogList from './components/BlogList';
 import BlogPost from './components/BlogPost';
-import ScrollToTop from './components/ScrollToTop'; // We need to create this
+import ScrollToTop from './components/ScrollToTop';
+import Manifesto from './components/Manifesto';
+import Terms from './components/Terms';
+import Privacy from './components/Privacy';
 
 const Home: React.FC<{ onOpenAI: () => void }> = ({ onOpenAI }) => (
   <div className="min-h-screen bg-background-light text-gray-900 selection:bg-primary selection:text-black overflow-x-hidden">
@@ -40,6 +42,9 @@ const App: React.FC = () => {
           <Route path="/" element={<Home onOpenAI={() => setIsAiOpen(true)} />} />
           <Route path="/blog" element={<BlogList />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/manifesto" element={<Manifesto />} />
+          <Route path="/termos" element={<Terms />} />
+          <Route path="/privacidade" element={<Privacy />} />
         </Routes>
         <AISidebar isOpen={isAiOpen} onClose={() => setIsAiOpen(false)} />
       </div>
