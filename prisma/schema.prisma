@@ -9,9 +9,19 @@ datasource db {
 }
 
 model Lead {
+  id         String   @id @default(uuid())
+  name       String
+  email      String
+  message    String?
+  linkedIn   String?
+  experience String?
+  role       String?
+  interest   String?
+  createdAt  DateTime @default(now())
+}
+
+model Newsletter {
   id        String   @id @default(uuid())
-  name      String
-  email     String
-  message   String
+  email     String   @unique
   createdAt DateTime @default(now())
 }

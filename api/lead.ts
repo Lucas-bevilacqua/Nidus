@@ -22,7 +22,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         return res.status(405).json({ error: 'Method not allowed' });
     }
 
-    const { name, email, message } = req.body;
+    const { name, email, message, linkedIn, experience, role, interest } = req.body;
 
     if (!name || !email) {
         return res.status(400).json({ error: 'Name and Email are required' });
@@ -34,6 +34,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
                 name,
                 email,
                 message: message || '',
+                linkedIn: linkedIn || '',
+                experience: experience || '',
+                role: role || '',
+                interest: interest || '',
             },
         });
 
