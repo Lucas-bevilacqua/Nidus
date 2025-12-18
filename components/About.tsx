@@ -11,22 +11,21 @@ const About: React.FC = () => {
               • Sobre Nós
             </span>
             <h2 className="text-4xl lg:text-6xl font-black leading-tight mb-8">
-              O Código Sozinho é Estático.<br />
-              <span className="text-primary">O Negócio é Vivo.</span>
+              Software sem venda é código morto.
             </h2>
           </div>
-          
+
           <div className="space-y-10 text-gray-400">
             <p className="text-xl leading-relaxed">
-              Na Nidus Ventures, não acreditamos em software de prateleira. Acreditamos em <span className="text-white font-bold border-b-2 border-primary pb-1">ecossistemas vivos</span>. O código é apenas o esqueleto; a operação comercial é o músculo, e a liderança é a alma.
+              Na Nidus, acreditamos que o maior ativo de uma startup não é o app, é a <span className="text-white font-bold border-b-2 border-primary pb-1">máquina de vendas</span>. O código é apenas o esqueleto; a operação comercial é o músculo.
             </p>
             <p className="text-lg leading-relaxed">
-              Nossa filosofia é construir <strong className="text-white">organismos vivos de recorrência</strong>. Negócios que não apenas funcionam, mas que evoluem, aprendem e dominam seus mercados. Transformamos a frieza dos dados no calor das vendas.
+              Por isso, invertemos o jogo: nós tiramos o risco técnico da frente (desenvolvemos, testamos e pagamos o servidor) para que você foque 100% no que importa: <strong className="text-white">trazer cliente e botar dinheiro no caixa</strong>.
             </p>
             <p className="text-lg leading-relaxed">
-              Buscamos operadores que entendam que uma startup não se faz apenas com features, mas com suor, estratégia e execução implacável. Somos o solo fértil onde o SaaS encontra o Business.
+              Buscamos operadores com "faca nos dentes". Se você cansou de vender para enriquecer os outros, seu lugar é aqui. Somos o solo fértil onde o SaaS encontra o Business.
             </p>
-            
+
             <div className="grid grid-cols-3 gap-8 pt-12 border-t border-white/10">
               <div>
                 <h3 className="text-3xl font-black text-white mb-2">Build</h3>

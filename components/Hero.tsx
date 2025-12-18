@@ -11,11 +11,11 @@ const Hero: React.FC = () => {
               • Venture Builder B2B
             </span>
             <h1 className="text-5xl lg:text-7xl font-black leading-[1.1] text-gray-900 mb-8">
-              O Código Sozinho é Estático.<br />
-              <span className="text-primary-gradient">O Negócio é Vivo.</span>
+              Nós construímos a Tecnologia.<br />
+              <span className="text-primary-gradient">Você constrói o Império.</span>
             </h1>
             <p className="text-lg text-gray-600 max-w-lg mb-10 leading-relaxed font-medium">
-              Somos uma venture builder B2B SaaS. Transformamos código em máquinas de vendas e operadores em sócios fundadores.
+              Transforme sua habilidade de vendas em Equity. Não somos uma agência. Somos uma fábrica de sócios. A Nidus entrega o Software pronto e a Infraestrutura paga. Você entra com a Execução Comercial para virar Co-Founder.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a

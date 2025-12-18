@@ -44,7 +44,7 @@ const AISidebar: React.FC<AISidebarProps> = ({ isOpen, onClose }) => {
         <div className="flex justify-between items-center mb-10">
           <div className="flex items-center gap-2">
             <span className="material-icons-round text-primary bg-black p-1.5 rounded-lg">auto_awesome</span>
-            <h2 className="text-2xl font-black">AI Startup Validator</h2>
+            <h2 className="text-2xl font-black">Teste sua ideia de Startup</h2>
           </div>
           <button onClick={onClose} className="text-gray-400 hover:text-black">
             <span className="material-icons-round text-3xl">close</span>

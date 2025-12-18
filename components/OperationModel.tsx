@@ -5,29 +5,29 @@ const stages = [
   {
     fase: '01',
     icon: 'lightbulb',
-    title: 'A Concepção',
-    desc: 'Onde a tese nasce e é posta à prova. Foco total em validação.',
-    resp: 'Nidus Ventures (Core Team)',
-    actions: 'Discovery, Prototipação, Validação de Problema',
-    goal: 'Product-Market Fit'
+    title: 'Produto Validado',
+    desc: 'Nós entregamos o SaaS pronto, testado e com infraestrutura 100% paga pela Nidus. Zero risco técnico para você.',
+    resp: 'Nidus Ventures Tech',
+    actions: 'Software Pronto, Infraestrutura Paga',
+    goal: 'Produto na Mão'
   },
   {
     fase: '02',
     icon: 'construction',
-    title: 'A Incubação',
-    desc: 'Transformando validação em um negócio real com tração.',
-    resp: 'Nidus + Sócios Operadores',
-    actions: 'Construção do time, Vendas Outbound, Processos',
-    goal: 'Máquina de Vendas'
+    title: 'A Caçada',
+    desc: 'Validação Comercial. Você assume a operação. 100% do valor de implantação é seu para financiar sua prospecção. O foco é abrir mercado.',
+    resp: 'Sócio Operador (Hunter)',
+    actions: 'Vendas, Prospecção, Primeiros Clientes',
+    goal: 'Validação Comercial'
   },
   {
     fase: '03',
     icon: 'flight_takeoff',
-    title: 'O Voo',
-    desc: 'A empresa ganha vida própria e domina seu segmento.',
-    resp: 'Sócios Operadores (Liderança)',
-    actions: 'Escala, Otimização Financeira, Expansão',
-    goal: 'Exit ou Consolidação'
+    title: 'A Sociedade',
+    desc: 'Escala & Lucro. Ao bater as metas de validação, você consolida sua participação societária. Deixamos de ser parceiros e viramos sócios no lucro e no Exit.',
+    resp: 'Sócios (Nidus + Hunter)',
+    actions: 'Escala, Liderança de Time, Exit',
+    goal: 'Equity & Lucro'
   }
 ];
 
@@ -37,7 +37,7 @@ const OperationModel: React.FC = () => {
       <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary rounded-full blur-[200px]"></div>
       </div>
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-20">
           <span className="inline-block bg-[#333] text-primary text-[10px] font-bold px-3 py-1 rounded uppercase tracking-widest mb-6">
@@ -50,7 +50,7 @@ const OperationModel: React.FC = () => {
             Do zero ao exit, nosso processo é desenhado para mitigar riscos e maximizar o potencial de escala em cada fase da jornada.
           </p>
         </div>
-        
+
         <div className="grid lg:grid-cols-3 gap-8">
           {stages.map((s, i) => (
             <div key={i} className="bg-surface-dark p-8 md:p-10 rounded-[2rem] border border-card-border hover:border-primary/50 transition-colors group">
@@ -62,12 +62,12 @@ const OperationModel: React.FC = () => {
                   Fase {s.fase}
                 </span>
               </div>
-              
+
               <h3 className="text-2xl font-black mb-4">{s.title}</h3>
               <p className="text-gray-400 mb-10 leading-relaxed font-medium pb-8 border-b border-white/5">
                 {s.desc}
               </p>
-              
+
               <div className="space-y-6">
                 <div>
                   <p className="text-[10px] font-bold uppercase tracking-widest text-primary mb-2">Responsabilidade</p>
