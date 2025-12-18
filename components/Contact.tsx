@@ -26,9 +26,17 @@ const Contact: React.FC = () => {
       });
 
       if (!response.ok) {
-        const errorData = await response.json();
-        console.error('Submission failed:', errorData);
-        throw new Error(errorData.details || errorData.error || 'Failed to submit');
+        let errorMsg = 'Failed to submit';
+        try {
+          const errorData = await response.json();
+          console.error('Submission failed (JSON):', errorData);
+          errorMsg = errorData.details || errorData.error || errorMsg;
+        } catch (e) {
+          const textError = await response.text();
+          console.error('Submission failed (Text):', textError);
+          errorMsg = `Server Error: ${response.status}`;
+        }
+        throw new Error(errorMsg);
       }
 
       setStatus('success');
