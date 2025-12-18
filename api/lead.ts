@@ -5,6 +5,11 @@ import type { VercelRequest, VercelResponse } from '@vercel/node';
 const prisma = new PrismaClient();
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
+    // Debug logging
+    console.log('API Lead handler called');
+    console.log('Method:', req.method);
+    console.log('DATABASE_URL present:', !!process.env.DATABASE_URL); // Don't log the full secret
+
     if (req.method !== 'POST') {
         return res.status(405).json({ error: 'Method not allowed' });
     }
