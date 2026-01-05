@@ -121,18 +121,18 @@ const AdminDashboard: React.FC<{ onOpenAI: () => void }> = ({ onOpenAI }) => {
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <div className="bg-white p-8 rounded-[2rem] border border-gray-100 shadow-sm">
                                 <p className="text-xs font-bold text-gray-400 uppercase mb-4 tracking-widest">MRR Global</p>
-                                <h3 className="text-4xl font-black text-gray-900">R$ 48.250</h3>
-                                <p className="text-sm text-green-500 mt-2 font-bold">+12% vs mês anterior</p>
+                                <h3 className="text-4xl font-black text-gray-900">R$ {stats.totalMrr.toLocaleString('pt-BR')}</h3>
+                                <p className="text-sm text-green-500 mt-2 font-bold">Saúde Global</p>
                             </div>
                             <div className="bg-white p-8 rounded-[2rem] border border-gray-100 shadow-sm">
                                 <p className="text-xs font-bold text-gray-400 uppercase mb-4 tracking-widest">Sócios Ativos</p>
-                                <h3 className="text-4xl font-black text-gray-900">12</h3>
-                                <p className="text-sm text-gray-500 mt-2 font-medium">4 em fase de Cliff</p>
+                                <h3 className="text-4xl font-black text-gray-900">{stats.activePartners}</h3>
+                                <p className="text-sm text-gray-500 mt-2 font-medium">Hunters cadastrados</p>
                             </div>
                             <div className="bg-white p-8 rounded-[2rem] border border-gray-100 shadow-sm">
                                 <p className="text-xs font-bold text-gray-400 uppercase mb-4 tracking-widest">Unidades SaaS</p>
-                                <h3 className="text-4xl font-black text-gray-900">08</h3>
-                                <p className="text-sm text-gray-500 mt-2 font-medium">6 com sócios alocados</p>
+                                <h3 className="text-4xl font-black text-gray-900">{stats.totalUnits.toString().padStart(2, '0')}</h3>
+                                <p className="text-sm text-gray-500 mt-2 font-medium">Projetos ativos</p>
                             </div>
                         </div>
 

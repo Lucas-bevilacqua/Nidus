@@ -30,7 +30,17 @@ const Login: React.FC = () => {
 
             if (res.ok) {
                 login(data.token, data.user);
-                navigate(from, { replace: true });
+
+                // Redirect based on role if no 'from' location
+                if (!location.state) {
+                    if (data.user.role === 'ADMIN') {
+                        navigate('/admin', { replace: true });
+                    } else {
+                        navigate('/dashboard', { replace: true });
+                    }
+                } else {
+                    navigate(from, { replace: true });
+                }
             } else {
                 setError(data.error || 'Erro ao entrar');
             }
