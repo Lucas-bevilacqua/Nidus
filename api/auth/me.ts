@@ -1,0 +1,36 @@
+import { VercelRequest, VercelResponse } from '@vercel/node';
+import { PrismaClient } from '@prisma/client';
+import jwt from 'jsonwebtoken';
+
+const prisma = new PrismaClient();
+const JWT_SECRET = process.env.JWT_SECRET || 'fallback-secret-for-dev';
+
+export default async function handler(req: VercelRequest, res: VercelResponse) {
+    const authHeader = req.headers.authorization;
+    if (!authHeader || !authHeader.startsWith('Bearer ')) {
+        return res.status(401).json({ error: 'No token provided' });
+    }
+
+    const token = authHeader.split(' ')[1];
+
+    try {
+        const decoded = jwt.verify(token, JWT_SECRET) as { userId: string };
+        const user = await prisma.user.findUnique({
+            where: { id: decoded.userId },
+            include: {
+                partnerships: {
+                    include: {
+                        project: true
+                    }
+                }
+            }
+        });
+
+        if (!user) return res.status(404).json({ error: 'User not found' });
+
+        const { passwordHash, ...userWithoutHash } = user;
+        return res.status(200).json(userWithoutHash);
+    } catch (error) {
+        return res.status(401).json({ error: 'Invalid token' });
+    }
+}

@@ -1,16 +1,26 @@
 import React from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import { useAuth } from '../context/AuthContext';
 
 const Dashboard: React.FC<{ onOpenAI: () => void }> = ({ onOpenAI }) => {
-    // Mock data based on Blueprint 5.1
+    const { user } = useAuth();
+
+    // Use data from the first partnership or fallback to mock
+    const partnership = user?.partnerships?.[0] || {
+        project: { name: 'Unidade de Teste' },
+        currentMRR: 0,
+        currentEquity: 10,
+        totalActiveClients: 0
+    };
+
     const stats = {
-        mrr: 12500,
-        equity: 10,
-        clients: 42,
+        mrr: partnership.currentMRR || 0,
+        equity: partnership.currentEquity || 10,
+        clients: partnership.totalActiveClients || 0,
         nextMilestone: 20000,
-        setupRevenue: 8500,
-        bounties: 4500
+        setupRevenue: 0,
+        bounties: 0
     };
 
     const progressToNextEquity = (stats.mrr / stats.nextMilestone) * 100;
@@ -24,14 +34,14 @@ const Dashboard: React.FC<{ onOpenAI: () => void }> = ({ onOpenAI }) => {
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-6">
                     <div>
                         <span className="text-primary font-bold uppercase tracking-widest text-xs mb-2 block">Área do Sócio</span>
-                        <h1 className="text-4xl font-black text-gray-900">Nidus OS <span className="text-gray-400 text-2xl font-medium">/ Unidade Kopilot</span></h1>
+                        <h1 className="text-4xl font-black text-gray-900">Nidus OS <span className="text-gray-400 text-2xl font-medium">/ Unidade {partnership.project.name}</span></h1>
                     </div>
                     <div className="flex gap-4">
                         <div className="bg-white border border-gray-100 p-4 rounded-2xl shadow-sm">
                             <p className="text-[10px] font-bold text-gray-400 uppercase mb-1">Status do Cliff</p>
                             <div className="flex items-center gap-2">
                                 <div className="w-2 h-2 rounded-full bg-yellow-400 animate-pulse"></div>
-                                <span className="text-sm font-bold">Em Validação (Dia 42/90)</span>
+                                <span className="text-sm font-bold">Em Validação</span>
                             </div>
                         </div>
                     </div>
@@ -55,7 +65,7 @@ const Dashboard: React.FC<{ onOpenAI: () => void }> = ({ onOpenAI }) => {
                     <div className="bg-white p-8 rounded-[2rem] border border-gray-100 shadow-sm">
                         <p className="text-xs font-bold text-gray-400 uppercase mb-4 tracking-widest">Base de Clientes</p>
                         <h3 className="text-4xl font-black text-gray-900">{stats.clients}</h3>
-                        <p className="text-sm text-green-500 mt-2 font-bold">+5 este mês</p>
+                        <p className="text-sm text-green-500 mt-2 font-bold">Ativos</p>
                     </div>
 
                     <div className="bg-white p-8 rounded-[2rem] border border-gray-100 shadow-sm">
@@ -120,7 +130,7 @@ const Dashboard: React.FC<{ onOpenAI: () => void }> = ({ onOpenAI }) => {
                                 <span className="material-icons-round text-4xl">{isPróLaboreUnlocked ? 'check_circle' : 'lock'}</span>
                             </div>
                             <p className="text-sm font-black uppercase tracking-widest text-gray-900">
-                                {isPróLaboreUnlocked ? 'Pró-labore Ativado!' : 'R$ 2.500 restantes para o gatilho'}
+                                {isPróLaboreUnlocked ? 'Pró-labore Ativado!' : `R$ ${(15000 - stats.mrr).toLocaleString('pt-BR')} restantes`}
                             </p>
                         </div>
 
