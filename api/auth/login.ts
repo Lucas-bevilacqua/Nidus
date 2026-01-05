@@ -48,8 +48,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         console.error('Login error:', error);
         return res.status(500).json({
             error: 'Internal server error',
-            details: error.message,
-            stack: process.env.NODE_ENV === 'development' ? error.stack : undefined
+            message: error.message,
+            code: error.code,
+            envCheck: {
+                hasDbUrl: !!process.env.DATABASE_URL,
+                hasJwtSecret: !!process.env.JWT_SECRET,
+                nodeEnv: process.env.NODE_ENV
+            }
         });
     }
 }
