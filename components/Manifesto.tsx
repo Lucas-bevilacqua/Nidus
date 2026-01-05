@@ -26,33 +26,33 @@ const Manifesto: React.FC<{ onOpenAI: () => void }> = ({ onOpenAI }) => {
 
                     <div className="prose prose-xl prose-gray max-w-none prose-p:font-medium prose-p:text-gray-600 prose-headings:font-black prose-headings:text-black">
                         <p className="text-2xl font-bold text-gray-900 leading-relaxed border-l-4 border-primary pl-6 py-2">
-                            O modelo tradicional de Venture Capital está quebrado para quem executa.
-                            Fundadores técnicos constroem produtos incríveis que ninguém usa.
-                            Vendedores talentosos enriquecem acionistas vendendo produtos ruins.
+                            O modelo tradicional de investimento está quebrado para quem faz as coisas acontecerem.
+                            Especialistas técnicos criam sistemas ótimos que ninguém usa.
+                            Vendedores talentosos enriquecem os outros vendendo produtos ruins.
                         </p>
 
-                        <h2 className="text-4xl mt-16 mb-8">A Era do Hunter Founder</h2>
+                        <h2 className="text-4xl mt-16 mb-8">A Era do Vendedor Dono</h2>
                         <p>
-                            Acreditamos que a próxima onda de unicórnios B2B não será construída por engenheiros trancados em garagens no Vale do Silício,
-                            mas por <strong>Hunters</strong>: operadores comerciais obcecados por resolver a dor do cliente, que conhecem o cheiro da rua e o som do "sim".
+                            Acreditamos que as próximas empresas de sucesso não serão criadas por engenheiros trancados em escritórios,
+                            mas por quem está na linha de frente: pessoas obcecadas por resolver o problema do cliente, que sabem fechar um bom negócio.
                         </p>
                         <p>
-                            O código hoje é commodity. IA escreve código. A infraestrutura é barata. O que é raro, caro e impossível de automatizar é a capacidade humana de
-                            criar relacionamentos, abrir portas e fechar contratos complexos.
+                            Criar tecnologia hoje é algo acessível. O que é raro e impossível de automatizar é a capacidade humana de
+                            criar parcerias, abrir portas e fechar grandes contratos.
                         </p>
 
-                        <h2 className="text-4xl mt-16 mb-8">Nossa Promessa Radical</h2>
+                        <h2 className="text-4xl mt-16 mb-8">Nossa Promessa Real</h2>
                         <p>
-                            Na Nidus Ventures, nós removemos a barreira técnica da equação.
+                            Na Nidus, nós removemos toda a barreira técnica da frente.
                             <br />
-                            <span className="bg-primary/20 px-1">Nós construímos o software.</span>
+                            <span className="bg-primary/20 px-1">Nós criamos o sistema.</span>
                             <span className="bg-primary/20 px-1 ml-1">Nós pagamos o servidor.</span>
-                            <span className="bg-primary/20 px-1 ml-1">Nós garantimos a escalabilidade.</span>
+                            <span className="bg-primary/20 px-1 ml-1">Nós garantimos que tudo funcione.</span>
                         </p>
                         <p>
-                            Você não precisa aprender Python. Você não precisa buscar um CTO co-founder em meetups.
+                            Você não precisa ser um programador. Você não precisa procurar um sócio técnico em eventos.
                             Você precisa saber vender.
-                            Se você tem a faca nos dentes e o playbook de vendas, nós temos a tecnologia de ponta.
+                            Se você é bom nisso e tem resultados, nós temos a tecnologia de ponta.
                         </p>
 
                         <div className="bg-background-dark p-12 rounded-[2.5rem] mt-16 shadow-2xl relative overflow-hidden group">
@@ -60,7 +60,7 @@ const Manifesto: React.FC<{ onOpenAI: () => void }> = ({ onOpenAI }) => {
                             <div className="relative z-10">
                                 <p className="text-white text-2xl lg:text-3xl font-black italic text-center leading-tight">
                                     "Não buscamos funcionários. Buscamos sócios. <br />
-                                    Não queremos currículos. Queremos track record."
+                                    Não queremos apenas currículos. Queremos resultados reais."
                                 </p>
                                 <div className="mt-8 flex justify-center">
                                     <a href="#contato" className="bg-primary text-black px-8 py-3 rounded-full font-bold hover:bg-white transition-colors uppercase tracking-widest text-xs">

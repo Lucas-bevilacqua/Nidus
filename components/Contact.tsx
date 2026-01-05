@@ -61,10 +61,10 @@ const Contact: React.FC = () => {
                 Fazer Parte
               </span>
               <h2 className="text-5xl lg:text-7xl font-black leading-tight text-gray-900 mb-8">
-                Torne-se um Sócio-Operador
+                Seja um de nossos Sócios
               </h2>
               <p className="text-xl text-gray-500 max-w-md font-medium">
-                Buscamos os melhores Hunters do mercado. Preencha o questionário de screening e nossa equipe avaliará seu perfil para uma das nossas startups.
+                Buscamos os melhores talentos de vendas do mercado. Preencha este breve formulário e entraremos em contato para avaliar seu perfil.
               </p>
             </div>
 
@@ -74,8 +74,8 @@ const Contact: React.FC = () => {
                   <span className="material-icons-round">assignment_ind</span>
                 </div>
                 <div>
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-1">Processo</p>
-                  <p className="text-lg font-black text-gray-900">Screening & Validação</p>
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-1">Passo a passo</p>
+                  <p className="text-lg font-black text-gray-900">Conversa e Avaliação</p>
                 </div>
               </div>
 
@@ -84,8 +84,8 @@ const Contact: React.FC = () => {
                   <span className="material-icons-round">groups</span>
                 </div>
                 <div>
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-1">Equity</p>
-                  <p className="text-lg font-black text-gray-900">Sociedade Real por Performance</p>
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-1">Participação</p>
+                  <p className="text-lg font-black text-gray-900">Sociedade Real por Resultados</p>
                 </div>
               </div>
             </div>

@@ -15,6 +15,7 @@ import ScrollToTop from './components/ScrollToTop';
 import Manifesto from './components/Manifesto';
 import Terms from './components/Terms';
 import Privacy from './components/Privacy';
+import Dashboard from './components/Dashboard';
 
 const Home: React.FC<{ onOpenAI: () => void }> = ({ onOpenAI }) => (
   <div className="min-h-screen bg-background-light text-gray-900 selection:bg-primary selection:text-black overflow-x-hidden">
@@ -45,6 +46,7 @@ const App: React.FC = () => {
           <Route path="/manifesto" element={<Manifesto onOpenAI={() => setIsAiOpen(true)} />} />
           <Route path="/termos" element={<Terms onOpenAI={() => setIsAiOpen(true)} />} />
           <Route path="/privacidade" element={<Privacy onOpenAI={() => setIsAiOpen(true)} />} />
+          <Route path="/dashboard" element={<Dashboard onOpenAI={() => setIsAiOpen(true)} />} />
         </Routes>
         <AISidebar isOpen={isAiOpen} onClose={() => setIsAiOpen(false)} />
       </div>

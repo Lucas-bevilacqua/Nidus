@@ -20,6 +20,67 @@ model Lead {
   createdAt  DateTime @default(now())
 }
 
+
+model User {
+  id           String        @id @default(uuid())
+  name         String
+  email        String        @unique
+  passwordHash String?       // Added for authentication
+  role         Role          @default(OPERATOR)
+  partnerships Partnership[]
+  createdAt    DateTime      @default(now())
+}
+
+enum Role {
+  ADMIN
+  OPERATOR
+}
+
+model Project {
+  id          String        @id @default(uuid())
+  name        String
+  description String?
+  ticketValue Float         @default(0.0)
+  partnerships Partnership[]
+  createdAt   DateTime      @default(now())
+}
+
+model Partnership {
+  id             String   @id @default(uuid())
+  userId         String
+  projectId      String
+  user           User     @relation(fields: [userId], references: [id])
+  project        Project  @relation(fields: [projectId], references: [id])
+  
+  // Blueprint 5.1 Rules
+  currentEquity  Float    @default(10.0) 
+  cliffApproved  Boolean  @default(false)
+  cliffStartsAt  DateTime @default(now())
+  
+  // Performance Indicators
+  currentMRR     Float    @default(0.0)
+  totalActiveClients Int  @default(0)
+  
+  revenues       Revenue[]
+  
+  createdAt      DateTime @default(now())
+}
+
+model Revenue {
+  id            String      @id @default(uuid())
+  partnershipId String
+  partnership   Partnership @relation(fields: [partnershipId], references: [id])
+  type          RevenueType
+  amount        Float
+  date          DateTime    @default(now())
+}
+
+enum RevenueType {
+  SETUP
+  BOUNTY
+  RECURRING
+}
+
 model Newsletter {
   id        String   @id @default(uuid())
   email     String   @unique

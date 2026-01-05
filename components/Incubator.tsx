@@ -4,18 +4,18 @@ import React from 'react';
 const features = [
   {
     icon: 'rocket_launch',
-    title: 'Validação Rápida',
-    desc: 'Testamos hipóteses em tempo recorde. Falhar rápido para acertar grande, garantindo o produto na mão de quem paga.'
+    title: 'Teste na Prática',
+    desc: 'Testamos a ideia em tempo recorde. Validamos rápido para garantir que o produto seja exatamente o que o cliente precisa.'
   },
   {
     icon: 'bar_chart',
-    title: 'Escala Comercial',
-    desc: 'Foco total em vendas e crescimento sustentável desde o dia um. Transformamos leads em receita recorrente.'
+    title: 'Vender Muito',
+    desc: 'Foco total em vendas e crescimento sustentável desde o primeiro dia. Transformamos interessados em faturamento mensal.'
   },
   {
     icon: 'cached',
-    title: 'Operação Viva',
-    desc: 'Negócios que se adaptam e evoluem organicamente. O software é a fundação, a venda é a vida.'
+    title: 'Negócio que Evolui',
+    desc: 'Empresas que se adaptam e crescem naturalmente. A tecnologia é a base, mas a venda é o que dá vida ao negócio.'
   }
 ];
 
@@ -25,9 +25,9 @@ const Incubator: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-12 mb-20">
           <div className="max-w-2xl">
-            <h2 className="text-4xl lg:text-5xl font-black mb-6 text-gray-900">Incubadora de Inovação</h2>
+            <h2 className="text-4xl lg:text-5xl font-black mb-6 text-gray-900">Onde criamos negócios</h2>
             <p className="text-xl text-gray-500 leading-relaxed font-medium">
-              Não criamos apenas software. Criamos máquinas de vendas que escalam com precisão cirúrgica e liderança forte.
+              Não criamos apenas software. Criamos negócios lucrativos que crescem com estratégia e liderança forte.
             </p>
           </div>
           <button className="bg-black text-white px-8 py-4 rounded-full font-bold hover:bg-gray-800 transition-colors whitespace-nowrap shadow-xl">

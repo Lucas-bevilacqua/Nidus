@@ -17,27 +17,27 @@ const About: React.FC = () => {
 
           <div className="space-y-10 text-gray-400">
             <p className="text-xl leading-relaxed">
-              Na Nidus, acreditamos que o maior ativo de uma startup não é o app, é a <span className="text-white font-bold border-b-2 border-primary pb-1">máquina de vendas</span>. O código é apenas o esqueleto; a operação comercial é o músculo.
+              Na Nidus, acreditamos que o maior valor de uma empresa não é o software, é a <span className="text-white font-bold border-b-2 border-primary pb-1">máquina de vendas</span>. A tecnologia é a base, mas o sucesso vem de quem sabe vender.
             </p>
             <p className="text-lg leading-relaxed">
-              Por isso, invertemos o jogo: nós tiramos o risco técnico da frente (desenvolvemos, testamos e pagamos o servidor) para que você foque 100% no que importa: <strong className="text-white">trazer cliente e botar dinheiro no caixa</strong>.
+              Por isso, simplificamos o caminho: nós resolvemos toda a parte técnica (criamos o sistema e pagamos os servidores) para que você foque 100% no que importa: <strong className="text-white">trazer clientes e crescer o faturamento</strong>.
             </p>
             <p className="text-lg leading-relaxed">
-              Buscamos operadores com "faca nos dentes". Se você cansou de vender para enriquecer os outros, seu lugar é aqui. Somos o solo fértil onde o SaaS encontra o Business.
+              Buscamos pessoas com vontade de crescer. Se você cansou de vender apenas para os outros, seu lugar é aqui. Unimos a tecnologia ao seu talento comercial para criar grandes negócios.
             </p>
 
             <div className="grid grid-cols-3 gap-8 pt-12 border-t border-white/10">
               <div>
-                <h3 className="text-3xl font-black text-white mb-2">Build</h3>
-                <p className="text-[10px] font-bold uppercase tracking-widest text-gray-500">Construção</p>
+                <h3 className="text-3xl font-black text-white mb-2">Criação</h3>
+                <p className="text-[10px] font-bold uppercase tracking-widest text-gray-500">Desenvolvimento</p>
               </div>
               <div>
-                <h3 className="text-3xl font-black text-white mb-2">Scale</h3>
-                <p className="text-[10px] font-bold uppercase tracking-widest text-gray-500">Crescimento</p>
+                <h3 className="text-3xl font-black text-white mb-2">Crescimento</h3>
+                <p className="text-[10px] font-bold uppercase tracking-widest text-gray-500">Escala</p>
               </div>
               <div>
-                <h3 className="text-3xl font-black text-white mb-2">Exit</h3>
-                <p className="text-[10px] font-bold uppercase tracking-widest text-gray-500">Objetivo</p>
+                <h3 className="text-3xl font-black text-white mb-2">Futuro</h3>
+                <p className="text-[10px] font-bold uppercase tracking-widest text-gray-500">Objetivo final</p>
               </div>
             </div>
           </div>

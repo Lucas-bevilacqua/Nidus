@@ -5,29 +5,29 @@ const stages = [
   {
     fase: '01',
     icon: 'lightbulb',
-    title: 'Produto Validado',
-    desc: 'Nós entregamos o SaaS pronto, testado e com infraestrutura 100% paga pela Nidus. Zero risco técnico para você.',
-    resp: 'Nidus Ventures Tech',
-    actions: 'Software Pronto, Infraestrutura Paga',
-    goal: 'Produto na Mão'
+    title: 'Produto Pronto',
+    desc: 'Nós entregamos a tecnologia completa e testada, com todos os custos de servidor pagos pela Nidus. Zero risco técnico para você.',
+    resp: 'Tecnologia Nidus',
+    actions: 'Software Pronto, Custos Pagos',
+    goal: 'Sistema no Ar'
   },
   {
     fase: '02',
     icon: 'construction',
-    title: 'A Caçada',
-    desc: 'Validação Comercial. Você assume a operação. 100% do valor de implantação é seu para financiar sua prospecção. O foco é abrir mercado.',
-    resp: 'Sócio Operador (Hunter)',
-    actions: 'Vendas, Prospecção, Primeiros Clientes',
-    goal: 'Validação Comercial'
+    title: 'Primeiras Vendas',
+    desc: 'Hora de vender. Você assume a operação. 100% do valor da taxa de implantação é seu para investir no seu crescimento. O foco é conquistar mercado.',
+    resp: 'Sócio de Vendas',
+    actions: 'Prospecção e Primeiros Clientes',
+    goal: 'Vendas Garantidas'
   },
   {
     fase: '03',
     icon: 'flight_takeoff',
-    title: 'A Sociedade',
-    desc: 'Escala & Lucro. Ao bater as metas de validação, você consolida sua participação societária. Deixamos de ser parceiros e viramos sócios no lucro e no Exit.',
-    resp: 'Sócios (Nidus + Hunter)',
-    actions: 'Escala, Liderança de Time, Exit',
-    goal: 'Equity & Lucro'
+    title: 'Lucro e Sociedade',
+    desc: 'Crescimento Real. Ao atingir as metas combinadas, você consolida sua participação como sócio. Compartilhamos o lucro e o sucesso futuro.',
+    resp: 'Sócios Unidos',
+    actions: 'Crescimento e Liderança',
+    goal: 'Sociedade e Lucro'
   }
 ];
 
@@ -41,13 +41,13 @@ const OperationModel: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-20">
           <span className="inline-block bg-[#333] text-primary text-[10px] font-bold px-3 py-1 rounded uppercase tracking-widest mb-6">
-            O Nidus Way
+            O Estilo Nidus
           </span>
           <h2 className="text-4xl lg:text-6xl font-black mb-6">
-            Modelo de Operação: <span className="text-primary">3 Estágios de Vida</span>
+            Como crescemos juntos: <span className="text-primary">3 passos simples</span>
           </h2>
           <p className="text-gray-400 text-lg">
-            Do zero ao exit, nosso processo é desenhado para mitigar riscos e maximizar o potencial de escala em cada fase da jornada.
+            Do início ao sucesso, nosso processo é feito para reduzir riscos e aumentar suas chances de ganhar dinheiro e ter um negócio de valor.
           </p>
         </div>
 

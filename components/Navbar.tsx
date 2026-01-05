@@ -23,8 +23,9 @@ const Navbar: React.FC<NavbarProps> = ({ onOpenAI }) => {
             className="flex items-center gap-2 text-gray-600 hover:text-black transition-colors"
           >
             <span className="material-icons-round text-lg">auto_awesome</span>
-            AI Validator
+            Validar Ideia
           </button>
+          <Link to="/dashboard" className="hover:text-black transition-colors">Portal do Sócio</Link>
           <Link
             to="/#contato"
             className="bg-primary text-black px-6 py-2.5 rounded-full hover:bg-primary-hover transition-colors shadow-sm"

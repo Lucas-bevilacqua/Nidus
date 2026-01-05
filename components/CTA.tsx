@@ -12,23 +12,23 @@ const CTA: React.FC = () => {
               Cansado de bater meta para ganhar só comissão?
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8 font-medium">
-              Estamos buscando Hunters (Caçadores) que queiram evoluir para Founders (Donos).
+              Estamos buscando vendedores de elite que queiram se tornar donos do próprio negócio.
             </p>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto mb-12 text-left">
               <div className="bg-white/5 p-4 rounded-xl border border-white/10">
-                <p className="text-xs text-primary font-bold uppercase tracking-widest mb-1">O Produto</p>
-                <p className="text-white font-black text-lg">Pronto</p>
+                <p className="text-xs text-primary font-bold uppercase tracking-widest mb-1">Tecnologia</p>
+                <p className="text-white font-black text-lg">Pronta</p>
               </div>
               <div className="bg-white/5 p-4 rounded-xl border border-white/10">
-                <p className="text-xs text-primary font-bold uppercase tracking-widest mb-1">O Mercado</p>
-                <p className="text-white font-black text-lg">B2B</p>
+                <p className="text-xs text-primary font-bold uppercase tracking-widest mb-1">Clientes</p>
+                <p className="text-white font-black text-lg">Empresas</p>
               </div>
               <div className="bg-white/5 p-4 rounded-xl border border-white/10">
-                <p className="text-xs text-primary font-bold uppercase tracking-widest mb-1">O Risco</p>
+                <p className="text-xs text-primary font-bold uppercase tracking-widest mb-1">Risco</p>
                 <p className="text-white font-black text-lg">Dividido</p>
               </div>
               <div className="bg-white/5 p-4 rounded-xl border border-white/10">
-                <p className="text-xs text-primary font-bold uppercase tracking-widest mb-1">O Retorno</p>
+                <p className="text-xs text-primary font-bold uppercase tracking-widest mb-1">Retorno</p>
                 <p className="text-white font-black text-lg">Sociedade Real</p>
               </div>
             </div>

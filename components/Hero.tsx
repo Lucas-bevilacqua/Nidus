@@ -8,27 +8,27 @@ const Hero: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="z-10">
             <span className="inline-block bg-white border border-gray-200 text-gray-500 text-[10px] font-bold px-3 py-1 rounded uppercase tracking-widest mb-6">
-              • Venture Builder B2B
+              • Parceria para novos negócios
             </span>
             <h1 className="text-5xl lg:text-7xl font-black leading-[1.1] text-gray-900 mb-8">
               Nós construímos a Tecnologia.<br />
-              <span className="text-primary-gradient">Você constrói o Império.</span>
+              <span className="text-primary-gradient">Você constrói o Negócio.</span>
             </h1>
             <p className="text-lg text-gray-600 max-w-lg mb-10 leading-relaxed font-medium">
-              Transforme sua habilidade de vendas em Equity. Não somos uma agência. Somos uma fábrica de sócios. A Nidus entrega o Software pronto e a Infraestrutura paga. Você entra com a Execução Comercial para virar Co-Founder.
+              Transforme seu talento em vendas em participação real no negócio. Não somos uma agência de serviços. Somos criadores de empresas. A Nidus entrega o software pronto e os custos de tecnologia são por nossa conta. Você entra com as vendas para virar sócio.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="#contato"
                 className="bg-primary text-black px-8 py-4 rounded-full font-bold hover:bg-primary-hover transition-all transform hover:-translate-y-1 shadow-xl shadow-yellow-400/20 text-center"
               >
-                Sou um operador comercial e quero ser sócio
+                Sou bom de vendas e quero ser sócio
               </a>
               <a
                 href="#modelo"
                 className="border-2 border-gray-900 text-gray-900 px-8 py-4 rounded-full font-bold hover:bg-gray-900 hover:text-white transition-all text-center"
               >
-                Conheça nosso modelo
+                Veja como funciona
               </a>
             </div>
           </div>
