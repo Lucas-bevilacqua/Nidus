@@ -1,11 +1,17 @@
 import { PrismaClient } from '@prisma/client';
+import { PrismaPg } from '@prisma/adapter-pg';
+import pkg from 'pg';
+const { Pool } = pkg;
 
 let prisma: PrismaClient;
 
 if (process.env.NODE_ENV === 'production') {
-    prisma = new PrismaClient();
+    const connectionString = process.env.DATABASE_URL;
+    const pool = new Pool({ connectionString });
+    const adapter = new PrismaPg(pool);
+    prisma = new PrismaClient({ adapter });
 } else {
-    // For local dev, we might still want dotenv
+    // For local dev
     try {
         const dotenv = await import('dotenv');
         dotenv.config();
