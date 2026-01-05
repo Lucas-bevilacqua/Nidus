@@ -1,4 +1,5 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
+import { prisma } from '../lib/db';
 import pkg from 'pg';
 const { Client } = pkg;
 
@@ -19,11 +20,20 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         pgTest = `Error: ${e.message}`;
     }
 
+    let queryTest = 'Not attempted';
+    try {
+        const count = await prisma.user.count();
+        queryTest = `Success: ${count} users found`;
+    } catch (e: any) {
+        queryTest = `Error: ${e.message}`;
+    }
+
     return res.status(200).json({
         diagnostics: {
             nodeEnv: process.env.NODE_ENV,
             hasDatabaseUrl: !!dbUrl,
             pgTest,
+            queryTest,
             timestamp: new Date().toISOString()
         }
     });
