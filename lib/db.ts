@@ -1,9 +1,13 @@
 import { PrismaClient } from '@prisma/client';
 import * as dotenv from 'dotenv';
 import * as path from 'path';
+import * as fs from 'fs';
 
-// Force load .env and override system variables
-dotenv.config({ path: path.resolve(process.cwd(), '.env'), override: true });
+// Only load .env if it exists (local development)
+const envPath = path.resolve(process.cwd(), '.env');
+if (fs.existsSync(envPath)) {
+    dotenv.config({ path: envPath, override: true });
+}
 
 let prisma: PrismaClient;
 
