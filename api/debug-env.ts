@@ -1,4 +1,5 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
+import { prisma } from '../lib/db';
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
     const dbUrl = process.env.DATABASE_URL;
