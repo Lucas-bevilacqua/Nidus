@@ -14,7 +14,7 @@ const Navbar: React.FC<NavbarProps> = ({ onOpenAI }) => {
     <nav className="fixed top-0 w-full z-50 bg-background-light/80 backdrop-blur-md border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex justify-between items-center h-20">
         <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-          <span className="font-black text-2xl tracking-tighter">Nidus Ventures</span>
+          <img src="/assets/logo.png" alt="Nidus Ventures Logo" className="h-10 w-auto" />
         </Link>
 
         <div className="hidden md:flex items-center gap-8 text-sm font-semibold text-gray-600">

@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         <div className="flex flex-col items-center">
           <div className="flex items-center gap-2 mb-12">
-            <span className="font-black text-3xl tracking-tighter">Nidus Ventures</span>
+            <img src="/assets/logo.png" alt="Nidus Ventures Logo" className="h-12 w-auto" />
           </div>
 
           <div className="flex flex-wrap justify-center gap-8 md:gap-12 mb-12">

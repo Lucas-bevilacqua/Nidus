@@ -55,6 +55,7 @@ const Login: React.FC = () => {
         <div className="min-h-screen bg-background-light flex items-center justify-center px-4">
             <div className="max-w-md w-full">
                 <div className="text-center mb-10">
+                    <img src="/assets/logo.png" alt="Nidus Ventures Logo" className="h-16 w-auto mx-auto mb-6" />
                     <h1 className="text-4xl font-black text-gray-900 mb-2 tracking-tighter">Nidus OS</h1>
                     <p className="text-gray-500 font-medium tracking-widest uppercase text-[10px]">Portal de Gestão de Unidades</p>
                 </div>
